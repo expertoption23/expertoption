@@ -691,6 +691,78 @@
         <div class="float-end mt-4">
          
         </div>
+         <style>
+        .containeer {
+  position: relative;
+  background: #ffffff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.containeer::before,
+.containeer::after {
+  content: '';
+  position: absolute;
+  border: 11px solid transparent;
+}
+
+.containeer::after {
+  border: 10px solid transparent;
+}
+
+.containeer.top::before,
+.containeer.top::after {
+  bottom: 100%;
+  left: 19px;
+  border-bottom-color: #ccc;
+}
+
+.containeer.top::after {
+  left: 20px;
+  border-bottom-color: #ffffff;
+}
+
+.containeer.bottom::before,
+.containeer.bottom::after {
+  top: 100%;
+  right: 19px;
+  border-top-color: #ccc;
+}
+
+.containeer.bottom::after {
+  right: 20px;
+  border-top-color: #ffffff;
+}
+
+/* Unrelated styles */
+:root {
+  font-size: 18px;
+}
+
+body {
+  height: 80vh;
+  line-height: 1.5;
+  font-family: sans-serif;
+ 
+}
+
+.content {
+  width: 100%;
+  max-width: 800px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h2 small {
+  opacity: 0.7;
+  font-weight: normal;
+}
+        </style>
         <!-- End Toggle Button -->
       </div>
       <hr class="horizontal dark my-1">
