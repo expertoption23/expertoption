@@ -162,7 +162,23 @@ canvas{width:100%;height:200px}
      <h3>Profit / Loss Candles</h3>
   <canvas id="candleChart"></canvas>
   <h3>Live Chart</h3>
-  <div id="tv-chart"></div>
+ <div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/" rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a><span class="trademark"></span></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+  {
+  "defaultColumn": "overview",
+  "screener_type": "crypto_mkt",
+  "displayCurrency": "USD",
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "locale": "en",
+  "width": "100%",
+  "height": 550
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
 
 
 
@@ -180,14 +196,7 @@ function toggleSidebar(){
   document.getElementById("sidebar").classList.toggle("open");
 }
 
-/* TradingView */
-new TradingView.widget({
-  container_id:"tv-chart",
-  autosize:true,
-  symbol:"OANDA:XAUUSD",
-  interval:"5",
-  theme:"light"
-});
+
 
 /* CONFIG */
 const VALID_CODE="XAUUSD3ewwewr43weqdwcer5";
